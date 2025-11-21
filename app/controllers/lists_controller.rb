@@ -17,7 +17,7 @@ class ListsController < ApplicationController
     if @list.save
       redirect_to list_path(@list)
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -25,6 +25,12 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
     @list.update(list_params)
     redirect_to list_path(@list)
+  end
+
+  def destroy
+    @list = List.find(params[:id])
+    @list.destroy
+    redirect_to lists_path, status: :see_other
   end
 
   private

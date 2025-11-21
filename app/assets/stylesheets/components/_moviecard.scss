@@ -1,0 +1,20 @@
+.moviecard {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 2px 16px;
+    border-radius: 4px;
+    align-content: center;
+    text-align: center;
+    width: 300px;
+    margin: 5px 5px;
+      img {
+        width: 150px;
+      }
+      p {
+        color: rgb(1, 1, 71);
+        font-style: italic;
+      }
+      h5 {
+        color: rgb(1, 1, 71);
+      }
+}
